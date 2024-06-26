@@ -30,6 +30,8 @@ rtlsrc=`ls $rtl`
 
 # Only perform if there are rlt files
 if [[ ! -z $rtlsrc ]]; then
+  rm -rf ./waves.shm
+  
   mkdir -p $orig/xil_defaultlib
 
   echo "============= Compile =============================================================== "
