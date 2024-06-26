@@ -45,7 +45,7 @@ if [[ ! -z $rtlsrc ]]; then
   # compile sysgtem verilog design source files
   svsrc=`ls $rtl/*.sv 2>/dev/null` 
   if [[ ! -z $svsrc ]]; then
-    $bin_path/xmvlog $xmvlog_opts -work xil_defaultlib $svsrc \
+    $bin_path/xmvlog $xmvlog_opts -sv -work xil_defaultlib $svsrc \
     2>&1 | tee $logs/compile.log; cat $logs/.tmp_log > $logs/xmvlog.log 2>/dev/null
   fi
 
