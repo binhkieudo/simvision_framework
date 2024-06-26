@@ -56,5 +56,5 @@ if [[ ! -z $rtlsrc ]]; then
   xmelab_opts="-64bit -relax -access +rwc -namemap_mixgen -messages -logfile $logs/elaborate.log"
 
   # run elaboration
-  $bin_path/xmelab $xmelab_opts $design_libs_elab xil_defaultlib.tb
+  $bin_path/xmelab $xmelab_opts $design_libs_elab xil_defaultlib.tb xil_defaultlib.glbl
 fi
