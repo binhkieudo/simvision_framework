@@ -7,7 +7,7 @@ init:
 compile:
 	./script/compile.sh
 
-simulate: restore.tcl
+simulate:
 	./script/simulate.sh
 
 clean:
