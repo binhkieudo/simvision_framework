@@ -32,5 +32,18 @@ create_lib_mappings()
 
 }
 
+# Add time scale
+timescale="\`timescale 1ns / 1ps"
+
+flist=`ls ./rtl`
+for f in $flist; do
+  ff=./rtl/$f
+  x=`grep "timescale" $ff`
+  if [ -z "$x" ]; then
+    echo $timescale > ./rtl/tmp
+    cat ./rtl/tmp $ff > tmp && mv tmp $ff
+  fi
+done
+
 # Launch script
 create_lib_mappings
