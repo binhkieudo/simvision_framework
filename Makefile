@@ -1,5 +1,5 @@
 export XCLIB=/home/binhkieudo/Public/Xilinx_library
-export XCPATH=/home/binhkieudo/cadence/installs/XCELIUM2303/tools.lnx86/bin
+export XCPATH=/cad/XCELIUM/tools.lnx86/bin
 
 init:
 	./script/setup.sh
